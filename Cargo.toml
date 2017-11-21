@@ -5,4 +5,9 @@ authors = ["Dave Huseby <dhuseby@linuxfoundation.org>"]
 
 [dependencies]
 afl = "0.2"
-indy-crypto = "0.1.6"
+
+[dependencies.indy-crypto]
+git = "https://github.com/dhuseby/indy-crypto.git"
+branch = "fuzz"
+default-features = false
+features = [ "pair_amcl" ]
