@@ -1,0 +1,8 @@
+[package]
+name = "indy-crypto-fuzz-target"
+version = "0.1.0"
+authors = ["Dave Huseby <dhuseby@linuxfoundation.org>"]
+
+[dependencies]
+afl = "0.2"
+indy-crypto = "0.1.6"
