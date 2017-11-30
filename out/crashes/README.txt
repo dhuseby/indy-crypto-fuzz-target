@@ -1,6 +1,6 @@
 Command line used to find this crash:
 
-/home/user/.local/share/afl.rs/rustc-1.23.0-nightly/afl.rs-0.2.2/afl/bin/afl-fuzz -i in -o out target/debug/indy-crypto-fuzz-target
+/home/huseby/.local/share/afl.rs/rustc-1.23.0-nightly/afl.rs-0.2.2/afl/bin/afl-fuzz -i in -o out target/debug/indy-crypto-fuzz-target
 
 If you can't reproduce a bug outside of afl-fuzz, be sure to set the same
 memory limit. The limit used for this fuzzing session was 50.0 MB.
