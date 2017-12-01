@@ -2,12 +2,43 @@
 name = "indy-crypto-fuzz-target"
 version = "0.1.0"
 authors = ["Dave Huseby <dhuseby@linuxfoundation.org>"]
+build = "build.rs"
+
+[build-dependencies.indy-crypto]
+git = "https://github.com/dhuseby/indy-crypto.git"
+branch = "fuzzing"
+default-features = false
+features = [ "pair_amcl" ]
 
 [dependencies]
 afl = "0.2"
 
 [dependencies.indy-crypto]
 git = "https://github.com/dhuseby/indy-crypto.git"
-branch = "fuzz"
+branch = "fuzzing"
 default-features = false
 features = [ "pair_amcl" ]
+
+[[bin]]
+name = "generator-from-bytes-fuzz-target"
+path = "src/generator_from_bytes.rs"
+
+[[bin]]
+name = "multi-signature-from-bytes-fuzz-target"
+path = "src/multi_signature_from_bytes.rs"
+
+[[bin]]
+name = "sign-key-from-bytes-fuzz-target"
+path = "src/sign_key_from_bytes.rs"
+
+[[bin]]
+name = "sign-key-new-fuzz-target"
+path = "src/sign_key_new.rs"
+
+[[bin]]
+name = "signature-from-bytes-fuzz-target"
+path = "src/signature_from_bytes.rs"
+
+[[bin]]
+name = "verkey-from-bytes-fuzz-target"
+path = "src/verkey_from_bytes.rs"
