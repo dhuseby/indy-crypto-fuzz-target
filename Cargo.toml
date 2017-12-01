@@ -4,20 +4,12 @@ version = "0.1.0"
 authors = ["Dave Huseby <dhuseby@linuxfoundation.org>"]
 build = "build.rs"
 
-[build-dependencies.indy-crypto]
-git = "https://github.com/dhuseby/indy-crypto.git"
-branch = "fuzzing"
-default-features = false
-features = [ "pair_amcl" ]
+[build-dependencies]
+indy-crypto = "0.1.6"
 
 [dependencies]
-afl = "0.2"
-
-[dependencies.indy-crypto]
-git = "https://github.com/dhuseby/indy-crypto.git"
-branch = "fuzzing"
-default-features = false
-features = [ "pair_amcl" ]
+afl = "0.3"
+indy-crypto = "0.1.6"
 
 [[bin]]
 name = "generator-from-bytes-fuzz-target"
